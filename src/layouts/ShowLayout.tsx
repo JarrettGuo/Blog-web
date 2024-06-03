@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { Outlet, useNavigate } from 'react-router-dom'
 import { Menu, Typography } from 'antd'
-import UserAvatar from '../components/UserAvatar'
+import UserInfo from '../components/UserInfo'
 import styles from './ShowLayout.module.scss'
 
 const { Title } = Typography
@@ -11,10 +11,10 @@ const ShowLayout: FC = () => {
     <div className={styles.container}>
       <div className={styles.left}>
         <div className={styles.header}>
-          <UserAvatar />
+          <UserInfo />
         </div>
         <Menu className={styles.footer}>
-          <Menu.Item key="About" className={styles.item}>
+          <Menu.Item key="About" className={styles.item} onClick={() => navigate('/show/about')}>
             <Title level={5}>About</Title>
           </Menu.Item>
           <Menu.Item key="Home" className={styles.item}>
@@ -25,7 +25,7 @@ const ShowLayout: FC = () => {
             className={styles.item}
             onClick={() => navigate('/show/article')}
           >
-            <Title level={5}>Daily</Title>
+            <Title level={5}>Article</Title>
           </Menu.Item>
         </Menu>
       </div>

@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { Empty } from 'antd'
-import ArticelCard from '../../components/ArticelCard'
+import ArticleCard from '../../components/ArticleCard'
 
 const Articles = [
   {
@@ -11,6 +11,7 @@ const Articles = [
     img: 'https://via.placeholder.com/150',
     createdAt: '2024-01-01',
     isTop: true,
+    type: 'type1',
   },
   {
     _id: '2',
@@ -20,6 +21,7 @@ const Articles = [
     img: 'https://via.placeholder.com/150',
     createdAt: '2024-01-02',
     isTop: false,
+    type: 'type2',
   },
   {
     _id: '3',
@@ -29,6 +31,7 @@ const Articles = [
     img: 'https://via.placeholder.com/150',
     createdAt: '2024-01-03',
     isTop: false,
+    type: 'type3',
   },
   {
     _id: '4',
@@ -38,6 +41,7 @@ const Articles = [
     img: 'https://via.placeholder.com/150',
     createdAt: '2024-01-04',
     isTop: true,
+    type: 'type4',
   },
 ]
 
@@ -47,7 +51,7 @@ const ArticlesList: FC = () => {
       <div>
         {Articles.length === 1 && <Empty description="There has no data." />}
         {Articles.length > 1 &&
-          Articles.map(article => <ArticelCard key={article._id} {...article} />)}
+          Articles.map(article => <ArticleCard key={article._id} {...article} />)}
       </div>
       <div></div>
     </>

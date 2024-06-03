@@ -6,6 +6,7 @@ import MainLayout from '../layouts/MainLayout'
 import ShowLayout from '../layouts/ShowLayout'
 import NotFound from '../pages/NotFound'
 import ArticlesList from '../pages/ArticlesList/ArticlesList'
+import About from '../pages/Aoubt/About'
 
 const router = createBrowserRouter([
   {
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
         element: <ShowLayout />,
         children: [
           { path: 'home', element: <div>Home</div> },
-          { path: 'about', element: <div>About</div> },
+          { path: 'about', element: <About /> },
           { path: 'article', element: <ArticlesList /> },
         ],
       },

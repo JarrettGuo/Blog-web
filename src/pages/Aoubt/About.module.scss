@@ -1,0 +1,36 @@
+.carouselContainer {
+    width: 100%;
+    margin: 20px;
+    background-color: #fff;
+  
+    .carousel .slide {
+      background: none;
+    }
+  
+    .carousel .legend {
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      padding: 10px;
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 5px;
+    }
+  }
+  
+  .imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover; // This ensures the image fully covers the container without distorting the aspect ratio
+    }
+  }
+  
