@@ -1,29 +1,31 @@
 import React, { FC } from 'react'
-import { Carousel } from 'react-responsive-carousel'
-import 'react-responsive-carousel/lib/styles/carousel.min.css'
+import { Carousel } from 'antd'
 import styles from './About.module.scss'
+
+const contentStyle: React.CSSProperties = {
+  margin: 0,
+  height: '200px',
+  color: '#fff',
+  lineHeight: '160px',
+  textAlign: 'center',
+  background: '#364d79',
+}
 
 const About: FC = () => {
   return (
-    <div className={styles.carouselContainer}>
-      <Carousel
-        showArrows={true}
-        autoPlay={true}
-        infiniteLoop={true}
-        showThumbs={false}
-        showStatus={false}
-      >
-        <div className={styles.imageContainer}>
-          <img src="/images/bcg.GIF" alt="Image 1" />
-          <p className="legend">Legend 1</p>
+    <div className={styles.container}>
+      <Carousel arrows infinite style={{ width: '92vh' }} autoplay>
+        <div>
+          <h3 style={contentStyle}>1</h3>
         </div>
-        <div className={styles.imageContainer}>
-          <img src="/images/bcg.GIF" alt="Image 2" />
-          <p className="legend">Legend 2</p>
+        <div>
+          <h3 style={contentStyle}>2</h3>
         </div>
-        <div className={styles.imageContainer}>
-          <img src="/images/bcg.GIF" alt="Image 3" />
-          <p className="legend">Legend 3</p>
+        <div>
+          <h3 style={contentStyle}>3</h3>
+        </div>
+        <div>
+          <h3 style={contentStyle}>4</h3>
         </div>
       </Carousel>
     </div>

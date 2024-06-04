@@ -7,7 +7,7 @@ import styles from './Home.module.scss'
 const Home: FC = () => {
   const navigate = useNavigate()
   const handelClick = () => {
-    navigate('/show')
+    navigate('/show/about')
   }
   return (
     <div className={styles.container}>
@@ -15,6 +15,9 @@ const Home: FC = () => {
         <UserAvatar />
         <Button type="primary" onClick={handelClick}>
           Primary Button
+        </Button>
+        <Button type="primary" onClick={() => navigate('/login')}>
+          Login
         </Button>
       </div>
     </div>

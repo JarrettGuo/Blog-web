@@ -7,6 +7,9 @@ import ShowLayout from '../layouts/ShowLayout'
 import NotFound from '../pages/NotFound'
 import ArticlesList from '../pages/ArticlesList/ArticlesList'
 import About from '../pages/Aoubt/About'
+import Categories from '../pages/Categories/Categories'
+import Login from '../pages/Login/Login'
+import Register from '../pages/Register/Register'
 
 const router = createBrowserRouter([
   {
@@ -15,11 +18,19 @@ const router = createBrowserRouter([
     children: [
       { path: '/', element: <Home /> },
       {
+        path: 'login',
+        element: <Login />,
+      },
+      {
+        path: 'register',
+        element: <Register />,
+      },
+      {
         path: 'show',
         element: <ShowLayout />,
         children: [
-          { path: 'home', element: <div>Home</div> },
           { path: 'about', element: <About /> },
+          { path: 'categories', element: <Categories /> },
           { path: 'article', element: <ArticlesList /> },
         ],
       },
