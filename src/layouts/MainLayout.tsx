@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 import { Outlet } from 'react-router-dom'
 import { Layout } from 'antd'
+import TopBar from '../components/TopBar'
 import styles from './MainLayout.module.scss'
 
 const { Header, Footer, Content } = Layout
@@ -8,7 +9,9 @@ const { Header, Footer, Content } = Layout
 const MainLayout: FC = () => {
   return (
     <Layout>
-      <Header className={styles.header}>Header</Header>
+      <Header className={styles.header}>
+        <TopBar />{' '}
+      </Header>
       <Content className={styles.main}>
         <Outlet />
       </Content>
